@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/untitled_design"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="379dp"
+        android:layout_height="111dp"
+        android:background="#E2ED6D"
+        android:backgroundTint="#FBFB98"
+        app:layout_constraintBottom_toTopOf="@+id/textSplitLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTip"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Bill Amount"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <EditText
+        android:id="@+id/editTextBill"
+        android:layout_width="397dp"
+        android:layout_height="41dp"
+        android:background="#FBFB98"
+        android:backgroundTint="#FBFB98"
+        android:hint=" e.g. 1200.00"
+        android:inputType="numberDecimal"
+        android:textColor="#050505"
+        android:textColorHint="#BDB4B4"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/textTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Tip Percentage: 15%"
+        android:textColor="#711818"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBill"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <SeekBar
+        android:id="@+id/seekBarTip"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00BCD4"
+        android:foregroundTint="#FFEBEB"
+        android:max="30"
+        android:progressTint="#FFEB3B"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTipLabel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Rate Service"
+        android:textColor="#0F0E0E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTip"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/rbPoor"
+            android:layout_width="107dp"
+            android:layout_height="70dp"
+            android:buttonTintMode="multiply"
+            android:text="Poor (5%)"
+            android:textColor="#3F51B5"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbGood"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:buttonTintMode="multiply"
+            android:text="Good (10%)"
+            android:textColor="#3F51B5"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbExcellent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTintMode="multiply"
+            android:text="Excellent (20%)"
+            android:textColor="#3F51B5"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textSplitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of People: 1"
+        android:textColor="#141313"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <SeekBar
+        android:id="@+id/seekBarSplit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFEB3B"
+        android:backgroundTintMode="add"
+        android:foregroundTint="#8BC34A"
+        android:max="10"
+        android:progressBackgroundTint="#D72121"
+        android:progressTint="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSplitLabel"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Rounding Option"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.579" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupRounding"
+        android:layout_width="237dp"
+        android:layout_height="43dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.626">
+
+        <RadioButton
+            android:id="@+id/rbRoundUp"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFEB3B"
+            android:buttonTint="@color/white"
+            android:buttonTintMode="multiply"
+            android:drawableTint="#E91E63"
+            android:shadowColor="#FFEB3B"
+            android:text="Round Up"
+            android:textColor="#FFEB3B"
+            android:textColorHint="#FFEB3B"
+            android:textColorLink="#FFEB3B"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbNoRound"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:buttonTint="#FFEB3B"
+            android:buttonTintMode="multiply"
+            android:text="No Rounding"
+            android:textColor="#FFEB3B"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="411dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#99E245"
+        android:text="Calculate: "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupRounding"
+        app:layout_constraintVertical_bias="0.378" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
